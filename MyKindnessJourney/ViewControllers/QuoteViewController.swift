@@ -25,21 +25,25 @@ class QuoteViewController: UIViewController {
     }
     
     func updateView() {
-
+        
         quoteController.fetchQuote { (quote) in
-
+            
             guard let quote = quote else { return }
-
+            
             self.quoteController.fetchBackgroundImage(with: quote, completion: { (image) in
-                DispatchQueue.main.async {
-
-                    self.backgroundImageView.image = image
-                    self.quoteLabel.text = quote.quote
-                    self.authorLabel.text = quote.author
-                    self.copyrightLabel.text = quote.copyright
+                
+                if let image = image {
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.backgroundImageView.image = image
+                        self.quoteLabel.text = quote.quote
+                        self.authorLabel.text = quote.author
+                        self.copyrightLabel.text = quote.copyright
+                    }
                 }
             })
-      }
+        }
     }
     
     private let quoteController = QuoteController()

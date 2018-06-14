@@ -9,13 +9,13 @@
 import Foundation
 import CoreData
 
-extension Journel {
+extension Journal {
     
-    convenience init(title: String, body: String, date: Date, context: NSManagedObjectContext = CoreDataStack.context) {
+    convenience init(title: String, body: String, context: NSManagedObjectContext = CoreDataStack.context) {
         
         self.init(context: context)
         self.title = title
         self.body = body
-        self.date = date
+        self.date = Date()
     }
 }
