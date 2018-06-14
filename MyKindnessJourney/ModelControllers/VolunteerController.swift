@@ -12,36 +12,37 @@ class VolunteerController {
     
     var volunteerOpportunities: [Volunteer] = []
     
-    let baseURL = URL(string: "https://volunteeringopportunitiesapi.firebaseio.com/")!
+    let baseURL = URL(string: "https://volunteeringopportunitiesapi.firebaseio.com/opportunities")!
     
-    func fetchStudents(completion: @escaping(Bool) -> Void) {
+    func fetchVolunteerOpportunities(completion: @escaping(Bool) -> Void) {
         
         let url = baseURL.appendingPathExtension("json")
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
+                var request = URLRequest(url: url)
+                request.httpMethod = "GET"
         
-        let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
+        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
             
-            guard let data = data else { completion(false); return }
-            
-            do {
-                let jsonDecoder = JSONDecoder()
-                let jsonDict = try jsonDecoder.decode(Volunteer.self, from: data)
-                let volunteerOpportunities = jsonDict.compactMap({$0.value})
-                self.volunteerOpportunities = volunteerOpportunities
-                completion(true)
+            if let data = data {
                 
-            } catch let error {
-                print(error)
-                completion(false); return
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let volunteerDictionary = try jsonDecoder.decode(Dictionary<String, Volunteer>.self, from: data)
+                    self.volunteerOpportunities = Array(volunteerDictionary.values)
+                    completion(true)
+                    
+                } catch let error {
+                    print(error)
+                    completion(false); return
+                }
             }
         }
-        task.resume()
+        dataTask.resume()
+        print(url)
     }
     
-    func postVolunteerOpportunity(organizationName: String, volunteerTitle: String, address: String, link: String, description: String, category: String, date: String, id: String, completion: @escaping(Bool) -> Void) {
+    func postVolunteerOpportunity(organizationName: String, volunteerTitle: String, streetAddress: String, city: String, state: String, zip: String, link: String, description: String, category: String, date: String, id: String, completion: @escaping(Bool) -> Void) {
         
-        let volunteerOpportunity = Volunteer(organizationName: organizationName, volunteerTitle: volunteerTitle, address: address, link: link, description: description, category: category, date: date, id: id)
+        let volunteerOpportunity = Volunteer(organizationName: organizationName, volunteerTitle: volunteerTitle, streetAddress: streetAddress, city: city, state: state, zip: zip, link: link, description: description, category: category, date: date, id: id)
         
         let url = baseURL.appendingPathExtension("json")
         
