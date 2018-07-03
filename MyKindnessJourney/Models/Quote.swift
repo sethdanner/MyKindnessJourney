@@ -30,6 +30,3 @@ struct Quote: Decodable {
         case copyright
     }
 }
-
-
-

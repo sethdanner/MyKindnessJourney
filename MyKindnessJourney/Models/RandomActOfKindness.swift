@@ -18,5 +18,4 @@ class RandomActOfKindness {
         self.act = act
         self.isComplete = isComplete
     }
-    
 }

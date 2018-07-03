@@ -9,55 +9,62 @@
 /* Begin PBXBuildFile section */
 		601EC9C520CEE98E0071D920 /* AddVolunteerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EC9C420CEE98E0071D920 /* AddVolunteerViewController.swift */; };
 		601EC9C720CF2E040071D920 /* VolunteerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EC9C620CF2E040071D920 /* VolunteerListTableViewController.swift */; };
-		601EC9C920CF2E170071D920 /* VolunteerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EC9C820CF2E170071D920 /* VolunteerTableViewCell.swift */; };
-		601EC9CB20D189EC0071D920 /* JournalListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EC9CA20D189EC0071D920 /* JournalListTableViewController.swift */; };
 		601EC9CD20D18D450071D920 /* JournalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601EC9CC20D18D450071D920 /* JournalDetailViewController.swift */; };
 		60367B4120C83C5C000B9774 /* VolunteerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60367B4020C83C5C000B9774 /* VolunteerController.swift */; };
 		60367B4320C8506D000B9774 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60367B4220C8506D000B9774 /* QuoteViewController.swift */; };
+		607B6B2220DAA98200C23169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607B6B2120DAA98200C23169 /* Assets.xcassets */; };
 		609245FD20C59D1A007E575C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609245FC20C59D1A007E575C /* AppDelegate.swift */; };
 		609245FF20C59D1A007E575C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609245FE20C59D1A007E575C /* WelcomeViewController.swift */; };
 		6092460220C59D1A007E575C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6092460020C59D1A007E575C /* Main.storyboard */; };
-		6092460520C59D1A007E575C /* MyKindnessJourney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6092460320C59D1A007E575C /* MyKindnessJourney.xcdatamodeld */; };
-		6092460720C59D1E007E575C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6092460620C59D1E007E575C /* Assets.xcassets */; };
 		6092460A20C59D1E007E575C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6092460820C59D1E007E575C /* LaunchScreen.storyboard */; };
 		6092461220C59F13007E575C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6092460B20C59D1E007E575C /* Info.plist */; };
-		6092461420C5A059007E575C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092461320C5A059007E575C /* CoreDataStack.swift */; };
-		6092461C20C5A5A6007E575C /* Convenience+Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092461B20C5A5A6007E575C /* Convenience+Journal.swift */; };
-		6092461F20C5D2C6007E575C /* JournalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092461E20C5D2C6007E575C /* JournalController.swift */; };
 		6092462320C5D36A007E575C /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092462220C5D36A007E575C /* Quote.swift */; };
 		6092462620C5D3AF007E575C /* RandomActOfKindness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092462520C5D3AF007E575C /* RandomActOfKindness.swift */; };
 		6092462820C5D3C5007E575C /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092462720C5D3C5007E575C /* Volunteer.swift */; };
 		6092462A20C5D788007E575C /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092462920C5D788007E575C /* QuoteController.swift */; };
 		6092462C20C5D7AC007E575C /* RandomActOfKindnessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6092462B20C5D7AC007E575C /* RandomActOfKindnessController.swift */; };
+		60AEC64C20D81A870090410B /* sunshineTree.gif in Resources */ = {isa = PBXBuildFile; fileRef = 60AEC64B20D81A870090410B /* sunshineTree.gif */; };
+		60AEC65020D9C8EE0090410B /* VolunteerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AEC64F20D9C8EE0090410B /* VolunteerDetailViewController.swift */; };
+		60BC39C320D5D848002B7977 /* GifHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60BC39C220D5D848002B7977 /* GifHelper.swift */; };
 		60BDC17D20CED95C00096B70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60BDC17C20CED95C00096B70 /* GoogleService-Info.plist */; };
+		60FFB1C020D33E3A009C5FEA /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFB1BF20D33E3A009C5FEA /* Journal.swift */; };
+		60FFB1C220D34009009C5FEA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFB1C120D34009009C5FEA /* Constants.swift */; };
+		60FFB1C420D343CF009C5FEA /* JournalEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFB1C320D343CF009C5FEA /* JournalEntryController.swift */; };
+		60FFB1C620D344D1009C5FEA /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFB1C520D344D1009C5FEA /* CloudKitManager.swift */; };
+		60FFB1C820D34DCD009C5FEA /* JournalEntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFB1C720D34DCD009C5FEA /* JournalEntryListTableViewController.swift */; };
+		60FFB1CB20D354C8009C5FEA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FFB1CA20D354C8009C5FEA /* CloudKit.framework */; };
 		D5BBE4192DE0DF48BB69325C /* Pods_MyKindnessJourney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C05DC6F28AC3FE6F4BF3C94 /* Pods_MyKindnessJourney.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		601EC9C420CEE98E0071D920 /* AddVolunteerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVolunteerViewController.swift; sourceTree = "<group>"; };
 		601EC9C620CF2E040071D920 /* VolunteerListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerListTableViewController.swift; sourceTree = "<group>"; };
-		601EC9C820CF2E170071D920 /* VolunteerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTableViewCell.swift; sourceTree = "<group>"; };
-		601EC9CA20D189EC0071D920 /* JournalListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListTableViewController.swift; sourceTree = "<group>"; };
 		601EC9CC20D18D450071D920 /* JournalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailViewController.swift; sourceTree = "<group>"; };
 		60367B4020C83C5C000B9774 /* VolunteerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerController.swift; sourceTree = "<group>"; };
 		60367B4220C8506D000B9774 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		607B6B2120DAA98200C23169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		609245F920C59D1A007E575C /* MyKindnessJourney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyKindnessJourney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		609245FC20C59D1A007E575C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		609245FE20C59D1A007E575C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6092460120C59D1A007E575C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6092460420C59D1A007E575C /* MyKindnessJourney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyKindnessJourney.xcdatamodel; sourceTree = "<group>"; };
-		6092460620C59D1E007E575C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6092460920C59D1E007E575C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6092460B20C59D1E007E575C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6092461320C5A059007E575C /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		6092461B20C5A5A6007E575C /* Convenience+Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Convenience+Journal.swift"; sourceTree = "<group>"; };
-		6092461E20C5D2C6007E575C /* JournalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalController.swift; sourceTree = "<group>"; };
 		6092462220C5D36A007E575C /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		6092462520C5D3AF007E575C /* RandomActOfKindness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomActOfKindness.swift; sourceTree = "<group>"; };
 		6092462720C5D3C5007E575C /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
 		6092462920C5D788007E575C /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 		6092462B20C5D7AC007E575C /* RandomActOfKindnessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomActOfKindnessController.swift; sourceTree = "<group>"; };
+		60AEC64B20D81A870090410B /* sunshineTree.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sunshineTree.gif; sourceTree = "<group>"; };
+		60AEC64F20D9C8EE0090410B /* VolunteerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDetailViewController.swift; sourceTree = "<group>"; };
+		60BC39C220D5D848002B7977 /* GifHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifHelper.swift; sourceTree = "<group>"; };
 		60BDC17C20CED95C00096B70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60FFB1BF20D33E3A009C5FEA /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		60FFB1C120D34009009C5FEA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		60FFB1C320D343CF009C5FEA /* JournalEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryController.swift; sourceTree = "<group>"; };
+		60FFB1C520D344D1009C5FEA /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		60FFB1C720D34DCD009C5FEA /* JournalEntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryListTableViewController.swift; sourceTree = "<group>"; };
+		60FFB1C920D354C2009C5FEA /* MyKindnessJourney.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyKindnessJourney.entitlements; sourceTree = "<group>"; };
+		60FFB1CA20D354C8009C5FEA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		7C05DC6F28AC3FE6F4BF3C94 /* Pods_MyKindnessJourney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyKindnessJourney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE224507F8F1818A2D57FBBD /* Pods-MyKindnessJourney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKindnessJourney.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyKindnessJourney/Pods-MyKindnessJourney.release.xcconfig"; sourceTree = "<group>"; };
 		E8F59C0D422C46AD8497426B /* Pods-MyKindnessJourney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyKindnessJourney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyKindnessJourney/Pods-MyKindnessJourney.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BBE4192DE0DF48BB69325C /* Pods_MyKindnessJourney.framework in Frameworks */,
+				60FFB1CB20D354C8009C5FEA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,9 +104,9 @@
 		609245FB20C59D1A007E575C /* MyKindnessJourney */ = {
 			isa = PBXGroup;
 			children = (
+				60FFB1C920D354C2009C5FEA /* MyKindnessJourney.entitlements */,
 				609245FC20C59D1A007E575C /* AppDelegate.swift */,
 				6092462420C5D370007E575C /* Models */,
-				6092461D20C5D0C4007E575C /* JournalCoreData */,
 				6092462020C5D2D0007E575C /* ModelControllers */,
 				6092462120C5D2DA007E575C /* ViewControllers */,
 				60BDC17B20CECDB100096B70 /* UI */,
@@ -110,27 +118,21 @@
 		6092461120C59F05007E575C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6092460620C59D1E007E575C /* Assets.xcassets */,
+				607B6B2120DAA98200C23169 /* Assets.xcassets */,
 				6092460B20C59D1E007E575C /* Info.plist */,
 				60BDC17C20CED95C00096B70 /* GoogleService-Info.plist */,
+				60FFB1C120D34009009C5FEA /* Constants.swift */,
+				60BC39C220D5D848002B7977 /* GifHelper.swift */,
+				60AEC64B20D81A870090410B /* sunshineTree.gif */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6092461D20C5D0C4007E575C /* JournalCoreData */ = {
-			isa = PBXGroup;
-			children = (
-				6092460320C59D1A007E575C /* MyKindnessJourney.xcdatamodeld */,
-				6092461320C5A059007E575C /* CoreDataStack.swift */,
-				6092461B20C5A5A6007E575C /* Convenience+Journal.swift */,
-			);
-			path = JournalCoreData;
 			sourceTree = "<group>";
 		};
 		6092462020C5D2D0007E575C /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6092461E20C5D2C6007E575C /* JournalController.swift */,
+				60FFB1C320D343CF009C5FEA /* JournalEntryController.swift */,
+				60FFB1C520D344D1009C5FEA /* CloudKitManager.swift */,
 				6092462920C5D788007E575C /* QuoteController.swift */,
 				6092462B20C5D7AC007E575C /* RandomActOfKindnessController.swift */,
 				60367B4020C83C5C000B9774 /* VolunteerController.swift */,
@@ -142,12 +144,12 @@
 			isa = PBXGroup;
 			children = (
 				609245FE20C59D1A007E575C /* WelcomeViewController.swift */,
+				60FFB1C720D34DCD009C5FEA /* JournalEntryListTableViewController.swift */,
+				601EC9CC20D18D450071D920 /* JournalDetailViewController.swift */,
 				60367B4220C8506D000B9774 /* QuoteViewController.swift */,
 				601EC9C620CF2E040071D920 /* VolunteerListTableViewController.swift */,
-				601EC9C820CF2E170071D920 /* VolunteerTableViewCell.swift */,
+				60AEC64F20D9C8EE0090410B /* VolunteerDetailViewController.swift */,
 				601EC9C420CEE98E0071D920 /* AddVolunteerViewController.swift */,
-				601EC9CA20D189EC0071D920 /* JournalListTableViewController.swift */,
-				601EC9CC20D18D450071D920 /* JournalDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +157,7 @@
 		6092462420C5D370007E575C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				60FFB1BF20D33E3A009C5FEA /* Journal.swift */,
 				6092462220C5D36A007E575C /* Quote.swift */,
 				6092462520C5D3AF007E575C /* RandomActOfKindness.swift */,
 				6092462720C5D3C5007E575C /* Volunteer.swift */,
@@ -183,6 +186,7 @@
 		E835604D36FFB85BB5E8BE5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60FFB1CA20D354C8009C5FEA /* CloudKit.framework */,
 				7C05DC6F28AC3FE6F4BF3C94 /* Pods_MyKindnessJourney.framework */,
 			);
 			name = Frameworks;
@@ -222,6 +226,14 @@
 				TargetAttributes = {
 					609245F820C59D1A007E575C = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -251,7 +263,8 @@
 				6092461220C59F13007E575C /* Info.plist in Resources */,
 				6092460A20C59D1E007E575C /* LaunchScreen.storyboard in Resources */,
 				60BDC17D20CED95C00096B70 /* GoogleService-Info.plist in Resources */,
-				6092460720C59D1E007E575C /* Assets.xcassets in Resources */,
+				60AEC64C20D81A870090410B /* sunshineTree.gif in Resources */,
+				607B6B2220DAA98200C23169 /* Assets.xcassets in Resources */,
 				6092460220C59D1A007E575C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,23 +321,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60BC39C320D5D848002B7977 /* GifHelper.swift in Sources */,
 				60367B4120C83C5C000B9774 /* VolunteerController.swift in Sources */,
 				6092462320C5D36A007E575C /* Quote.swift in Sources */,
 				6092462620C5D3AF007E575C /* RandomActOfKindness.swift in Sources */,
 				60367B4320C8506D000B9774 /* QuoteViewController.swift in Sources */,
-				6092460520C59D1A007E575C /* MyKindnessJourney.xcdatamodeld in Sources */,
-				6092461F20C5D2C6007E575C /* JournalController.swift in Sources */,
+				60FFB1C420D343CF009C5FEA /* JournalEntryController.swift in Sources */,
 				601EC9C720CF2E040071D920 /* VolunteerListTableViewController.swift in Sources */,
 				601EC9CD20D18D450071D920 /* JournalDetailViewController.swift in Sources */,
-				601EC9CB20D189EC0071D920 /* JournalListTableViewController.swift in Sources */,
+				60AEC65020D9C8EE0090410B /* VolunteerDetailViewController.swift in Sources */,
 				609245FF20C59D1A007E575C /* WelcomeViewController.swift in Sources */,
 				609245FD20C59D1A007E575C /* AppDelegate.swift in Sources */,
+				60FFB1C620D344D1009C5FEA /* CloudKitManager.swift in Sources */,
+				60FFB1C820D34DCD009C5FEA /* JournalEntryListTableViewController.swift in Sources */,
 				601EC9C520CEE98E0071D920 /* AddVolunteerViewController.swift in Sources */,
-				6092461420C5A059007E575C /* CoreDataStack.swift in Sources */,
-				6092461C20C5A5A6007E575C /* Convenience+Journal.swift in Sources */,
+				60FFB1C020D33E3A009C5FEA /* Journal.swift in Sources */,
+				60FFB1C220D34009009C5FEA /* Constants.swift in Sources */,
 				6092462A20C5D788007E575C /* QuoteController.swift in Sources */,
 				6092462820C5D3C5007E575C /* Volunteer.swift in Sources */,
-				601EC9C920CF2E170071D920 /* VolunteerTableViewCell.swift in Sources */,
 				6092462C20C5D7AC007E575C /* RandomActOfKindnessController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +484,7 @@
 			baseConfigurationReference = E8F59C0D422C46AD8497426B /* Pods-MyKindnessJourney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyKindnessJourney/MyKindnessJourney.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KP8U9QDYN;
 				INFOPLIST_FILE = "$(SRCROOT)/MyKindnessJourney/Resources/Info.plist";
@@ -480,7 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SethDanner.MyKindnessJourney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -489,6 +504,7 @@
 			baseConfigurationReference = BE224507F8F1818A2D57FBBD /* Pods-MyKindnessJourney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MyKindnessJourney/MyKindnessJourney.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9KP8U9QDYN;
 				INFOPLIST_FILE = "$(SRCROOT)/MyKindnessJourney/Resources/Info.plist";
@@ -499,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SethDanner.MyKindnessJourney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -525,19 +541,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6092460320C59D1A007E575C /* MyKindnessJourney.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6092460420C59D1A007E575C /* MyKindnessJourney.xcdatamodel */,
-			);
-			currentVersion = 6092460420C59D1A007E575C /* MyKindnessJourney.xcdatamodel */;
-			path = MyKindnessJourney.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 609245F120C59D1A007E575C /* Project object */;
 }
