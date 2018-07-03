@@ -27,8 +27,6 @@ class QuoteController {
                     let copyright = jsonDictionary.contents.copyright
                     guard var returnQuote = quoteArray.first else { return }
                     returnQuote.copyright = copyright
-                    
-//                    print(returnQuote.copyright)
                     completion(returnQuote)
                 } catch let error {
                     print(error)
@@ -45,12 +43,12 @@ class QuoteController {
         let url = backgroundImage.backgroundImageURLString
         
         let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
-
+            
             if let data = data {
                 let image = UIImage(data: data)
                 completion(image)
             }
-
+            
             if let error = error {
                 print(error)
                 completion(nil); return

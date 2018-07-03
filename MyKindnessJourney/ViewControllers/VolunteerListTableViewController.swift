@@ -8,25 +8,44 @@
 
 import UIKit
 
-class VolunteerListTableViewController: UITableViewController, UISearchBarDelegate {
-
+class VolunteerListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+    
     @IBOutlet weak var volunteerSearchBar: UISearchBar!
+    @IBOutlet weak var volunteerTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        volunteerTableView.delegate = self
+        volunteerTableView.dataSource = self
         volunteerSearchBar.delegate = self
-        volunteerSearchBar.showsCancelButton = true
-        volunteerSearchBar.placeholder = "Enter search criteria here..."
+        volunteerSearchBar.showsCancelButton = false
+        volunteerSearchBar.placeholder = "enter city, state, or zip code"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = false
+        
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        volunteerController.fetchVolunteerOpportunities { (success) in
+        VolunteerController.shared.fetchVolunteerOpportunities { (success) in
             
             if success {
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self.volunteerTableView.reloadData()
                 }
             }
             
@@ -36,47 +55,40 @@ class VolunteerListTableViewController: UITableViewController, UISearchBarDelega
                 }
             }
         }
+        
+        volunteerSearchBar.endEditing(true )
     }
-
-    // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return volunteerController.volunteerOpportunities.count
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        volunteerSearchBar.endEditing(true)
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "volunteerCell", for: indexPath) as! VolunteerTableViewCell
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        volunteerSearchBar.endEditing(true)
+    }
+    
+    // MARK: - Table view data source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let volunteerOpportunity = volunteerController.volunteerOpportunities[indexPath.row]
-        
-        cell.volunteerOpportunity = volunteerOpportunity
+        return VolunteerController.shared.volunteerOpportunities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "volunteerCell", for: indexPath)
+        let volunteerOpportunity = VolunteerController.shared.volunteerOpportunities[indexPath.row]
+        cell.textLabel?.text = volunteerOpportunity.name
+        cell.detailTextLabel?.text = volunteerOpportunity.organizationName
         
         return cell
     }
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
     
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toVolunteerDetailVC" {
+            guard let destinationVC = segue.destination as? VolunteerDetailViewController,
+                let indexPath = volunteerTableView.indexPathForSelectedRow else { return }
+            let volunteerOpportunity = VolunteerController.shared.volunteerOpportunities[indexPath.row]
+            destinationVC.volunteerOpportunity = volunteerOpportunity
+        }
     }
-    */
-    
-    private let volunteerController = VolunteerController()
-    
 }

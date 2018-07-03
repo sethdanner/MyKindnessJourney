@@ -10,18 +10,33 @@ import UIKit
 
 class QuoteViewController: UIViewController {
     
-    // Outlets
+    // MARK: Outlets
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var copyrightLabel: UILabel!
     @IBOutlet weak var backgroundImageView: UIImageView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateView()
+        setupQuoteText()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.enableAllOrientation = false
+        
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     func updateView() {
@@ -32,18 +47,19 @@ class QuoteViewController: UIViewController {
             
             self.quoteController.fetchBackgroundImage(with: quote, completion: { (image) in
                 
-                if let image = image {
-                    
-                    DispatchQueue.main.async {
-                        
-                        self.backgroundImageView.image = image
-                        self.quoteLabel.text = quote.quote
-                        self.authorLabel.text = quote.author
-                        self.copyrightLabel.text = quote.copyright
-                    }
+                DispatchQueue.main.async {
+                    self.quoteLabel.text = quote.quote
+                    self.authorLabel.text = "-\(quote.author)"
+                    self.copyrightLabel.text = quote.copyright
                 }
             })
         }
+    }
+    
+    func setupQuoteText() {
+        
+        quoteLabel.font = UIFont(name: "Baskerville", size: 22)
+        authorLabel.font = UIFont(name: "Baskerville", size: 22)
     }
     
     private let quoteController = QuoteController()
