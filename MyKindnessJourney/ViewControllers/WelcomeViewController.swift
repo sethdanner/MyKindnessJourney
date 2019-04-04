@@ -41,7 +41,7 @@ class WelcomeViewController: UIViewController {
         
         welcomeLabel.text = Constants.welcomeLabel
         welcomeLabel.textColor = UIColor(red: 153/255, green: 255/255, blue: 255/255, alpha: 1)
-        welcomeLabel.font = UIFont(name: "Chalkduster", size: 55)
+        welcomeLabel.font = UIFont(name: "Chalkduster", size: 45)
     }
     
     func designQuoteButton() {
