@@ -17,11 +17,7 @@ class VolunteerDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var organizationNameLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
-    @IBOutlet weak var dateTitleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var stateLabel: UILabel!
-    @IBOutlet weak var zipLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var findOutMoreButton: UIButton!
     
     
@@ -30,7 +26,7 @@ class VolunteerDetailViewController: UIViewController {
         
         updateViews()
         setupFindOutMoreButton()
-        setupDateLocationLabels()
+        setupAdressLabels()
     }
     
     @IBAction func findOutMoreButton(_ sender: UIButton) {
@@ -44,19 +40,12 @@ class VolunteerDetailViewController: UIViewController {
         titleLabel.text = volunteerOpportunity?.name
         organizationNameLabel.text = volunteerOpportunity?.organizationName
         shortDescriptionLabel.text = volunteerOpportunity?.shortDescription
-        dateLabel.text = volunteerOpportunity?.date
-        cityLabel.text = volunteerOpportunity?.city
-        stateLabel.text = volunteerOpportunity?.state
-        zipLabel.text = volunteerOpportunity?.zip
+        addressLabel.text = volunteerOpportunity?.address
         
         titleLabel.textColor = UIColor.black
         organizationNameLabel.textColor = UIColor.black
         shortDescriptionLabel.textColor = UIColor.black
-        dateLabel.textColor = UIColor.black
-        cityLabel.textColor = UIColor.black
-        stateLabel.textColor = UIColor.black
-        zipLabel.textColor = UIColor.black
-        
+        addressLabel.textColor = UIColor.black
     }
     
     func setupFindOutMoreButton() {
@@ -69,15 +58,12 @@ class VolunteerDetailViewController: UIViewController {
         findOutMoreButton.widthAnchor.constraint(equalToConstant: 170).isActive = true
     }
     
-    func setupDateLocationLabels() {
-        
-        dateTitleLabel.leftAnchor.constraint(equalTo: view.centerXAnchor, constant: -5).isActive = true
-        
-        dateLabel.leftAnchor.constraint(equalTo: view.centerXAnchor, constant: -5).isActive = true
-        dateLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 8).isActive = true
-        
-        cityLabel.leftAnchor.constraint(equalTo: view.centerXAnchor, constant: -5).isActive = true
-        
-        
+    func setupAdressLabels() {
+
+        addressLabel.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: -8).isActive = true
+        addressLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
+        addressLabel.bottomAnchor.constraint(equalTo: findOutMoreButton.topAnchor, constant: -40).isActive = true
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
+
     }
 }

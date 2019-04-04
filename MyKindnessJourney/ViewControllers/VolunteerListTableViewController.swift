@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class VolunteerListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -15,6 +16,9 @@ class VolunteerListTableViewController: UIViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         
         volunteerTableView.delegate = self
         volunteerTableView.dataSource = self
@@ -41,7 +45,9 @@ class VolunteerListTableViewController: UIViewController, UITableViewDelegate, U
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
-        VolunteerController.shared.fetchVolunteerOpportunities { (success) in
+        guard let searchTerm = searchBar.text, searchTerm.count > 0 else { return }
+        
+        VolunteerController.shared.fetchVolunteerOpportunities(with: searchTerm) { (success) in
             
             if success {
                 DispatchQueue.main.async {

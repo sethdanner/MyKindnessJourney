@@ -8,20 +8,21 @@
 
 import Foundation
 
-struct VolunteerJSONDictionary: Codable {
-    let opportunities: [Volunteer]
-}
+//struct VolunteerJSONDictionary: Codable {
+//    let json: [Volunteer]
+//}
 
 struct Volunteer: Codable {
     
     var organizationName: String
     var name: String
-    var city: String
-    var state: String
-    var zip: String
+//    var city: String
+//    var state: String
+//    var zip: String
+    var address: String
     var organizationName_url: String
     var shortDescription: String
-    var date: String?
+//    var date: String?
     var url: String
 }
 

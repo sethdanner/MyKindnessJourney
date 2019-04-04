@@ -25,7 +25,7 @@ class JournalEntryController {
         
         CloudKitManager.shared.save(recordsToSave: [journalEntryRecord]) { (error) in
             if let error = error {
-                print("There was an error saving the record to CloudKit: \(error.localizedDescription)")
+                print("😩There was an error saving the record to CloudKit: \(error) \(error.localizedDescription)😢")
                 completion(false)
                 return
             }

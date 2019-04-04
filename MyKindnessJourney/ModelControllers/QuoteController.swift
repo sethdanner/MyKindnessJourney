@@ -20,6 +20,8 @@ class QuoteController {
             
             if let data = data {
                 
+                print(data)
+                
                 do {
                     let jsonDecoder = JSONDecoder()
                     let jsonDictionary = try jsonDecoder.decode(JSONDictionary.self, from: data)
@@ -28,30 +30,11 @@ class QuoteController {
                     guard var returnQuote = quoteArray.first else { return }
                     returnQuote.copyright = copyright
                     completion(returnQuote)
+                    print("asdf")
                 } catch let error {
                     print(error)
                     completion(nil); return
                 }
-            }
-        }
-        dataTask.resume()
-        print(url)
-    }
-    
-    func fetchBackgroundImage(with backgroundImage: Quote, completion: @escaping(UIImage?) -> Void) {
-        
-        let url = backgroundImage.backgroundImageURLString
-        
-        let dataTask = URLSession.shared.dataTask(with: url) { (data, _, error) in
-            
-            if let data = data {
-                let image = UIImage(data: data)
-                completion(image)
-            }
-            
-            if let error = error {
-                print(error)
-                completion(nil); return
             }
         }
         dataTask.resume()

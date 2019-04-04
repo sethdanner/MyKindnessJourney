@@ -20,13 +20,11 @@ struct Content: Decodable {
 struct Quote: Decodable {
     let quote: String
     let author: String
-    let backgroundImageURLString: URL
     var copyright: String?
     
     enum CodingKeys: String, CodingKey {
         case quote 
         case author
-        case backgroundImageURLString = "background"
         case copyright
     }
 }
